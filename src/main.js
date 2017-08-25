@@ -11,6 +11,10 @@ import Message from './components/message/message'
 import Button from './components/button/button'
 
 const MyPlugin = {}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 851b4b3cea97cacf24ccb50ccc9f413267ab194e
 MyPlugin.install = function (Vue, option) {
   if (MyPlugin.install.installed) return
 

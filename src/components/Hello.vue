@@ -18,7 +18,7 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
      <message>234234234234</message>
-     <ww-button @click="butt">234234</ww-button>
+     <ww-button @click="butt" class="ww-button-warning">234234</ww-button>
   </div>
 </template>
 

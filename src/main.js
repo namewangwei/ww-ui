@@ -10,7 +10,6 @@ Vue.config.productionTip = false
 import Message from './components/message/message'
 
 const MyPlugin = {}
-const version = 0.1.0
 MyPlugin.install = function (Vue, option) {
   if (MyPlugin.install.installed) return
 

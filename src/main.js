@@ -8,12 +8,14 @@ import router from './router'
 Vue.config.productionTip = false
 
 import Message from './components/message/message'
+import Button from './components/button/button'
 
 const MyPlugin = {}
 MyPlugin.install = function (Vue, option) {
   if (MyPlugin.install.installed) return
 
   Vue.component(Message.name, Message)
+  Vue.component(Button.name, Button)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

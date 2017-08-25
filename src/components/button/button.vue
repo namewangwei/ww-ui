@@ -15,26 +15,11 @@
       disabled: Boolean,
       type: {
         default: 'default',
-        type: String,
-        validator (value) {
-          return [
-            'success',
-            'danger',
-            'primary',
-            'warning'
-          ].indexOf(value) > -1
-        }
+        type: String
       },
       size: {
         default: 'normal',
-        type: String,
-        validator (value) {
-          return [
-            'small',
-            'normal',
-            'large'
-          ].indexOf(value) > -1
-        }
+        type: String
       }
     },
     methods: {
@@ -48,7 +33,7 @@
 <style lang="scss">
    @import "./../../style/var.scss";
 
-    .ww-button, .ww-button-primary {
+    .ww-button {
       appearance: none;
       border-radius: 4px;
       border: 0;

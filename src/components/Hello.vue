@@ -18,6 +18,7 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
      <message>234234234234</message>
+     <ww-button @click="butt">234234</ww-button>
   </div>
 </template>
 
@@ -29,7 +30,10 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  created () {
+  methods: {
+    butt (event) {
+      console.log(11111)
+    }
   }
 }
 </script>

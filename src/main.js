@@ -11,10 +11,7 @@ import Message from './components/message/message'
 import Button from './components/button/button'
 
 const MyPlugin = {}
-<<<<<<< HEAD
-// const version = 0.1.0
-=======
->>>>>>> fe5c3df654242bada6a1395c618c3e386aa8d23c
+
 MyPlugin.install = function (Vue, option) {
   if (MyPlugin.install.installed) return
 

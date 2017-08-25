@@ -1,11 +1,9 @@
 <template>
   <button
-    :type="nativeType"
-    :size="nativeSize"
     class="ww-button"
-    :class="['ww-button-' + nativeType, 'ww-button' + nativeSize]"
-    @click="handleClick"
-  >
+    :class="['ww-button-' + type, 'ww-button' + size, {'isdisabled': disabled}]"
+    :disabled="disabled"
+    @click="handleClick">
     <slot></slot>
   </button>
 </template>
@@ -14,18 +12,20 @@
   export default {
     name: 'ww-button',
     props: {
-      nativeType: {
+      disabled: Boolean,
+      type: {
         default: 'default',
         type: String,
         validator (value) {
           return [
-            'default',
+            'success',
             'danger',
-            'primary'
+            'primary',
+            'warning'
           ].indexOf(value) > -1
         }
       },
-      nativeSize: {
+      size: {
         default: 'normal',
         type: String,
         validator (value) {
@@ -47,20 +47,32 @@
 
 <style lang="scss">
    @import "./../../style/var.scss";
-   /* $button-default-color: red; */
-    .ww-button {
+
+    .ww-button, .ww-button-primary {
       appearance: none;
       border-radius: 4px;
-      border: 1px solid $border-color;
+      border: 0;
       box-sizing: border-box;
       padding: 6px 12px;
       background: #fff;
       outline: none;
       cursor: pointer;
+      color: #fff;
+      background: $green-color;
+      font-size: 14px;
 
-      &:active, &:hover {
-          color: $blue-color;
-          border: 1px solid $blue-color;
+      &:active {
+          opacity: .4
       }
+    }
+
+    .ww-button-danger {
+      background: $red-color!important;
+    }
+    .ww-button-success {
+      background: $green-color!important;
+    }
+    .ww-button-warning {
+      background: $yellow-color!important;
     }
 </style>
